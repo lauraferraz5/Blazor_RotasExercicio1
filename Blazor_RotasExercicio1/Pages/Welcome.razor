@@ -1,0 +1,20 @@
+﻿@page "/welcome"
+@page "/welcome-back/{nome}"
+@page "/welcome-ticket/{ticket:int}"
+
+<h1>Bem-Vindo de Volta @Nome</h1>
+<p>Prazer em vê-lo novamente! </p>
+@if (Ticket > 5)
+{
+    <p>O valor do seu ticket é @Ticket</p>
+}
+
+
+
+@code {
+    [Parameter]
+    public string Nome { get; set; }
+
+    [Parameter]
+    public int Ticket { get; set; }
+}

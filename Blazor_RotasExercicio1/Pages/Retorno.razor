@@ -1,0 +1,13 @@
+﻿@page "/retorno"
+@inject NavigationManager navigation
+
+<h3>Retorno</h3>
+
+<button @onclick="NavegarWelcome">Ir para Welcome</button>
+
+@code {
+    public void NavegarWelcome()
+    {
+        navigation.NavigateTo("/welcome");
+    }
+}
